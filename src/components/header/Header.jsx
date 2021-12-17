@@ -9,7 +9,7 @@ class Header extends Component {
       <header>
         <h1>
           <NavLink exact to="/">
-            <img src={logo} alt="logo kasa" />
+            <img className="imgHeader" src={logo} alt="logo kasa" />
           </NavLink>
         </h1>
         <nav>

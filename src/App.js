@@ -19,8 +19,7 @@ class App extends Component {
           <Route path="/error">
             <Error />
           </Route>
-          {/* Changer le chemin pour le rendre dynamique pour les différents logements. */}
-          <Route path="/logement">
+          <Route path="/logement/:id">
             <Logement />
           </Route>
         </Switch>

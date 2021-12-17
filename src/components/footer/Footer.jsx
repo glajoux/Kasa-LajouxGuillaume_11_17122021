@@ -8,7 +8,7 @@ class Footer extends Component {
       <div className="footer">
         <footer>
           <h2>
-            <img src={logo} alt="logo Kasa" />
+            <img className="imgFooter" src={logo} alt="logo Kasa" />
           </h2>
           <p className="pFooter">© 2020 Kasa. All rights reserved</p>
         </footer>

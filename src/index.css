@@ -1,5 +1,9 @@
-body {
+*,
+::before,
+::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -13,5 +17,11 @@ body {
 }
 
 body {
-  margin: 2rem;
+  margin: 0;
+}
+
+#root {
+  margin: auto;
+  width: 90%;
+  max-width: 1240px;
 }
