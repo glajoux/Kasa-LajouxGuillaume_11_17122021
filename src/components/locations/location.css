@@ -11,6 +11,7 @@
 .locationCard {
   position: relative;
   margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 
 .locationCard h3 {
@@ -40,6 +41,10 @@
   }
 
   .locationCard {
-    width: 320px;
+    width: 315px;
+  }
+
+  .imgCard {
+    height: 240px;
   }
 }

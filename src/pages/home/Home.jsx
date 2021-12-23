@@ -33,11 +33,13 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
-        <div className="home">
-          <Banner titre={this.titre} />
+        <div className="mainWrapper">
+          <Header />
+          <div className="home">
+            <Banner titre={this.titre} />
+          </div>
+          <Location data={this.state.data} />
         </div>
-        <Location data={this.state.data} />
         <Footer />
       </React.Fragment>
     );
