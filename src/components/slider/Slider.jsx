@@ -30,40 +30,58 @@ class Slider extends Component {
   }
 
   render() {
-    return (
-      <div className="container-slider">
-        {this.props.data.pictures.map((photo, index) => (
-          <div
-            key={index}
-            className={
-              this.state.indexSlide === index ? "slide active-anim" : "slide"
-            }
-          >
-            <img src={photo} alt="vue d'une pièce de l'appartement" />
+    console.log(this.props.data.pictures);
+    if (this.props.data.pictures.length > 1) {
+      return (
+        <div className="container-slider">
+          {this.props.data.pictures.map((photo, index) => (
+            <div
+              key={index}
+              className={
+                this.state.indexSlide === index ? "slide active-anim" : "slide"
+              }
+            >
+              <img src={photo} alt="vue d'une pièce de l'appartement" />
+            </div>
+          ))}
+          <div className="compteur-img">
+            {this.state.indexSlide + 1}/{this.props.data.pictures.length}
           </div>
-        ))}
-        <div className="compteur-img">
-          {this.state.indexSlide + 1}/{this.props.data.pictures.length}
-        </div>
-        {/* <BtnSlider moveSlide={this.nextSlide} direction={"next"} />
-        <BtnSlider moveSlide={this.prevSlide} direction={"prev"} /> */}
+          {/* <BtnSlider moveSlide={this.nextSlide} direction={"next"} />
+          <BtnSlider moveSlide={this.prevSlide} direction={"prev"} /> */}
 
-        <button onClick={this.nextSlide}>
-          <img
-            src={flecheSlide}
-            alt="fleche caroussel droite"
-            className="arrowRight"
-          />
-        </button>
-        <button onClick={this.prevSlide}>
-          <img
-            src={flecheSlide}
-            alt="fleche caroussel gauche"
-            className="arrowLeft"
-          />
-        </button>
-      </div>
-    );
+          <button onClick={this.nextSlide}>
+            <img
+              src={flecheSlide}
+              alt="fleche caroussel droite"
+              className="arrowRight"
+            />
+          </button>
+          <button onClick={this.prevSlide}>
+            <img
+              src={flecheSlide}
+              alt="fleche caroussel gauche"
+              className="arrowLeft"
+            />
+          </button>
+        </div>
+      );
+    } else {
+      return (
+        <div className="container-slider">
+          {this.props.data.pictures.map((photo, index) => (
+            <div
+              key={index}
+              className={
+                this.state.indexSlide === index ? "slide active-anim" : "slide"
+              }
+            >
+              <img src={photo} alt="vue d'une pièce de l'appartement" />
+            </div>
+          ))}
+        </div>
+      );
+    }
   }
 }
 

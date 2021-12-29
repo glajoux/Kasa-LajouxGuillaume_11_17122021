@@ -44,6 +44,7 @@ class Logement extends Component {
           color: "var(--color-prim)",
           textAlign: "center",
           marginTop: "5rem",
+          fontWeight: "500",
         }}
       >
         En chargement ...
