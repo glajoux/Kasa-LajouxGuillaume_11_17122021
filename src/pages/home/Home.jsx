@@ -22,7 +22,7 @@ class Home extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch("./data/data.json")
+    fetch("data/data.json")
       .then((response) => response.json())
       .then((jsonResponse) => {
         this.setState({ data: jsonResponse, isLoading: false });
@@ -31,6 +31,8 @@ class Home extends Component {
   }
 
   render() {
+    console.log(this.state.data);
+
     return (
       <React.Fragment>
         <div className="mainWrapper">
@@ -39,6 +41,8 @@ class Home extends Component {
             <Banner titre={this.titre} />
           </div>
           <Location data={this.state.data} />
+          {/* <InfoLoc data={this.state.data[0]} /> */}
+          {/* <Slider data={this.state.data[0]} /> */}
         </div>
         <Footer />
       </React.Fragment>

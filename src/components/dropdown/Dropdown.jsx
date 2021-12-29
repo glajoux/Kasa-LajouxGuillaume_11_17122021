@@ -18,11 +18,13 @@ class Dropdown extends Component {
     }
     if (this.props.liste) {
       return (
-        <ul>
-          {this.props.liste.map((element) => (
-            <li key={element}>{element}</li>
-          ))}
-        </ul>
+        <div className="contentDropdown">
+          <ul>
+            {this.props.liste.map((element) => (
+              <li key={element}>{element}</li>
+            ))}
+          </ul>
+        </div>
       );
     }
   }

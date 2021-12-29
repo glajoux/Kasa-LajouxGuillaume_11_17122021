@@ -24,6 +24,10 @@
   padding: 1.5rem 1rem 1rem 1rem;
 }
 
+.contentDropdown ul li {
+  font-weight: 400;
+}
+
 .dropdownTitles {
   font-weight: 500;
   font-size: 0.9rem;
@@ -36,5 +40,9 @@
 @media screen and (min-width: 768px) {
   .dropdownTitles {
     font-size: 1.5rem;
+  }
+
+  .contentDropdown ul li {
+    font-size: 1.3rem;
   }
 }

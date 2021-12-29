@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { useParams } from "react-router";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import { Link } from "react-router-dom";
+import Slider from "../../components/slider/Slider";
+import InfoLoc from "../../components/infoLoc/InfoLoc";
 
 class Logement extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: [],
+      data: undefined,
       isLoading: false,
     };
   }
@@ -17,29 +17,35 @@ class Logement extends Component {
   componentDidMount() {
     this.setState({ isLoading: true });
     fetch("../../data/data.json")
-      .then((response) => {
-        console.log(response);
-        response.json();
-      })
-      .then((jsonResponse) => {
-        console.log(jsonResponse);
-        // this.setState({
-        //   data: jsonResponse,
-        //   isLoading: false,
-        // });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then((response) => response.json())
+      .then((jsonResponse) =>
+        this.setState({
+          data: jsonResponse.find(
+            (logement) => logement.id === this.props.match.params.id
+          ),
+          isLoading: false,
+        })
+      )
+      .catch((error) => console.log(error));
   }
 
   render() {
+    console.log(this.state.data);
+
+    const page = this.state.data ? (
+      <div>
+        <Slider data={this.state.data} />
+        <InfoLoc data={this.state.data} />
+      </div>
+    ) : (
+      <div>En chargement ...</div>
+    );
+
     return (
       <React.Fragment>
         <div className="mainWrapper">
           <Header />
-          <h1>Page de Logements</h1>
-          <p></p>
+          {page}
         </div>
         <Footer />
       </React.Fragment>

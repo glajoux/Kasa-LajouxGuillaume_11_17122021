@@ -16,9 +16,11 @@ class App extends Component {
           <Route path="/a-propos">
             <About />
           </Route>
-          <Route path="/logement/:id" Component={Logement}>
-            <Logement />
-          </Route>
+          <Route
+            path="/logement/:id"
+            render={(props) => <Logement {...props} />}
+          />
+
           <Route path="/error">
             <Error />
           </Route>
