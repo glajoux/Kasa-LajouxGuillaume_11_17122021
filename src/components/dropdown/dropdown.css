@@ -45,4 +45,8 @@
   .contentDropdown ul li {
     font-size: 1.3rem;
   }
+
+  .contentDropdown {
+    font-size: 1.3rem;
+  }
 }

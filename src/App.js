@@ -21,7 +21,7 @@ class App extends Component {
             render={(props) => <Logement {...props} />}
           />
 
-          <Route path="/error">
+          <Route path="*">
             <Error />
           </Route>
         </Switch>

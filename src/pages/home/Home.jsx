@@ -41,8 +41,6 @@ class Home extends Component {
             <Banner titre={this.titre} />
           </div>
           <Location data={this.state.data} />
-          {/* <InfoLoc data={this.state.data[0]} /> */}
-          {/* <Slider data={this.state.data[0]} /> */}
         </div>
         <Footer />
       </React.Fragment>
