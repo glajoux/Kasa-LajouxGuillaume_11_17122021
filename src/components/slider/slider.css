@@ -11,10 +11,8 @@
 }
 
 .slide {
-  max-width: 1240px;
-  height: 100%;
-  margin: auto;
   position: absolute;
+  height: 100%;
   opacity: 0;
 }
 
@@ -23,9 +21,9 @@
 }
 
 .slide img {
-  max-width: 1240px;
   object-fit: cover;
   border-radius: 10px;
+  height: 100%;
 }
 
 .arrowRight {
@@ -65,5 +63,11 @@
 
   .slide img {
     border-radius: 25px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .slide {
+    width: 100%;
   }
 }

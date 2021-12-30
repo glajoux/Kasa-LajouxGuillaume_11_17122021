@@ -16,7 +16,7 @@ class Stars extends Component {
       <div className="vote">
         {voteMax.map((vote, index) => (
           <img
-            key={index}
+            key={`star${index}`}
             src={this.props.vote < vote ? etoileGris : etoileOrange}
             alt="etoile de vote"
           />

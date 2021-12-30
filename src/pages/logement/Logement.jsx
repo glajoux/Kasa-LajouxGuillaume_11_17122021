@@ -3,7 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Slider from "../../components/slider/Slider";
 import InfoLoc from "../../components/infoLoc/InfoLoc";
-import Error from "../error/Error";
+import Error404 from "../../components/error404/Error404";
 
 class Logement extends Component {
   constructor(props) {
@@ -39,15 +39,8 @@ class Logement extends Component {
         <InfoLoc data={this.state.data} />
       </div>
     ) : (
-      <div
-        style={{
-          color: "var(--color-prim)",
-          textAlign: "center",
-          marginTop: "5rem",
-          fontWeight: "500",
-        }}
-      >
-        En chargement ...
+      <div>
+        <Error404 />
       </div>
     );
 
