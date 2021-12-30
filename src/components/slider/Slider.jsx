@@ -1,5 +1,5 @@
 import { Component } from "react";
-// import BtnSlider from "../btnSlider/BtnSlider";
+import BtnSlider from "../btnSlider/BtnSlider";
 import flecheSlide from "../../img/flecheSlide.svg";
 import "./slider.css";
 
@@ -47,10 +47,10 @@ class Slider extends Component {
           <div className="compteur-img">
             {this.state.indexSlide + 1}/{this.props.data.pictures.length}
           </div>
-          {/* <BtnSlider moveSlide={this.nextSlide} direction={"next"} />
-          <BtnSlider moveSlide={this.prevSlide} direction={"prev"} /> */}
+          <BtnSlider moveSlide={this.nextSlide} direction={"next"} />
+          <BtnSlider moveSlide={this.prevSlide} direction={"prev"} />
 
-          <button onClick={this.nextSlide}>
+          {/* <button onClick={this.nextSlide}>
             <img
               src={flecheSlide}
               alt="fleche caroussel droite"
@@ -63,7 +63,7 @@ class Slider extends Component {
               alt="fleche caroussel gauche"
               className="arrowLeft"
             />
-          </button>
+          </button> */}
         </div>
       );
     } else {

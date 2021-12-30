@@ -2,9 +2,14 @@ import { Component } from "react";
 import flecheSlide from "../../img/flecheSlide.svg";
 
 class BtnSlider extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
-      <button onClick={this.props.moveSlide()}>
+      <button onClick={this.props.moveSlide}>
         <img
           src={flecheSlide}
           alt="fleche caroussel"
