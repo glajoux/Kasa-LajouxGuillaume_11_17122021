@@ -1,6 +1,6 @@
 import { Component } from "react";
 import BtnSlider from "../btnSlider/BtnSlider";
-import flecheSlide from "../../img/flecheSlide.svg";
+// import flecheSlide from "../../img/flecheSlide.svg";
 import "./slider.css";
 
 class Slider extends Component {

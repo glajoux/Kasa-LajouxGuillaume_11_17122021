@@ -6,7 +6,7 @@ import "./infoLoc.css";
 
 class InfoLoc extends Component {
   render() {
-    console.log(this.props.data.equipments);
+    console.log(this.props.data.host);
     return (
       <>
         <div className="infoContainer">
@@ -27,13 +27,9 @@ class InfoLoc extends Component {
             <div>
               <Stars vote={this.props.data.rating} />
             </div>
-            <div>{/* <Host proprio={this.state.data.host} /> */}</div>
+            <div></div>
             <div className="proprio">
-              <div className="nom">
-                <h3>{this.props.data.host.name.split(" ")[0]}</h3>
-                <h3>{this.props.data.host.name.split(" ")[1]}</h3>
-              </div>
-              <img src={this.props.data.host.picture} alt="propriétaire" />
+              <Host proprio={this.props.data.host} />
             </div>
           </div>
         </div>
