@@ -1,6 +1,5 @@
 import { Component } from "react";
 import BtnSlider from "../btnSlider/BtnSlider";
-// import flecheSlide from "../../img/flecheSlide.svg";
 import "./slider.css";
 
 class Slider extends Component {
@@ -49,21 +48,6 @@ class Slider extends Component {
           </div>
           <BtnSlider moveSlide={this.nextSlide} direction={"next"} />
           <BtnSlider moveSlide={this.prevSlide} direction={"prev"} />
-
-          {/* <button onClick={this.nextSlide}>
-            <img
-              src={flecheSlide}
-              alt="fleche caroussel droite"
-              className="arrowRight"
-            />
-          </button>
-          <button onClick={this.prevSlide}>
-            <img
-              src={flecheSlide}
-              alt="fleche caroussel gauche"
-              className="arrowLeft"
-            />
-          </button> */}
         </div>
       );
     } else {

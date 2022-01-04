@@ -16,7 +16,7 @@ class InfoLoc extends Component {
             <div className="tags">
               <ul>
                 {this.props.data.tags.map((tag, index) => (
-                  <li key={tag - index} className="listeTags">
+                  <li key={index} className="listeTags">
                     {tag}
                   </li>
                 ))}
